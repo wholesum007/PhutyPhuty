@@ -56,7 +56,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5vw; height: 62px;
     border-bottom: 1px solid rgba(13,148,136,0.3);
-    border:1px solid green;
+
   }
   .nav-logo {
     font-family: var(--font-display); font-size: 1.15rem;
@@ -74,7 +74,6 @@
     letter-spacing: 0.04em; text-transform: uppercase;
     padding: 0 1rem; height: 62px; line-height: 62px;
     transition: color 0.2s, background 0.2s;
-    border:1px solid red;
   }
   .nav-links li a:hover, .nav-links li button:hover { color: var(--cyan); }
   .nav-links li button.nav-active {
@@ -197,6 +196,8 @@
     display:flex; flex-direction:column; align-items:center; justify-content:center;
     gap:0.6rem; cursor:pointer; transition:border-color 0.2s,background 0.2s;
   }
+
+  
   .gallery-card-placeholder:hover { border-color:var(--teal); background:rgba(13,148,136,0.06); }
   .gallery-card-placeholder span { font-size:2rem; }
   .gallery-card-placeholder p { font-size:0.82rem; color:var(--muted); font-weight:500; text-align:center; padding:0 1rem; }
@@ -235,7 +236,20 @@
     position:relative; overflow:hidden;
   }
   .about-visual::before { content:''; position:absolute; top:-60px; right:-60px; width:260px; height:260px; border-radius:50%; background:rgba(255,255,255,0.07); }
-  .about-emblem { font-family:var(--font-display); font-size:5.5rem; color:rgba(255,255,255,0.15); user-select:none; position:relative; z-index:1; }
+
+
+  .about-emblem { font-family:var(--font-display); font-size:5.5rem; color:rgba(255,255,255,0.15); user-select:none; position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:center;
+  }
+
+  .about-emblem img{
+    margin-top: 50px;
+    height: 80%;
+    width:80%;
+
+  }
+
+  
   .about-badge {
     position:absolute; bottom:1.4rem; left:1.4rem;
     background:rgba(12,45,78,0.85); color:#fff;
@@ -387,6 +401,18 @@
     .gallery-cards { grid-template-columns:1fr 1fr; }
     .gallery-main-grid { grid-template-columns:1fr 1fr; }
     .gallery-item.featured { grid-column:span 2; }
+
+    #mobile-hide{
+      display:none;
+
+    }
+
+      .about-emblem img{
+    margin-top: 20px;
+    height: 80%;
+    width:80%;
+
+  }
   }
   @media (max-width:480px) {
     .gallery-cards { grid-template-columns:1fr; }
@@ -395,5 +421,10 @@
     .stat-row { grid-template-columns:1fr 1fr; }
     .nav-links li a, .nav-links li button {
     font-size: 0.55rem;
-}
+    }
+
+    #mobile-hide{
+      display:none;
+
+    }
   }
